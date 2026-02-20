@@ -1,0 +1,252 @@
+/* ========================================
+   CONTACT PAGE STYLES
+   ======================================== */
+
+/* Header */
+.contact-header {
+  padding: 180px 0 80px;
+  background-color: var(--color-bg-primary);
+  text-align: center;
+}
+
+.contact-header h1 {
+  margin-bottom: 16px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.contact-header p {
+  font-size: 18px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Contact Content */
+.contact-content {
+  padding: 80px 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+}
+
+/* Contact Info */
+.contact-info {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-info.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.contact-intro {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Contact Details */
+.contact-details {
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.contact-value {
+  font-size: 16px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+  color: var(--color-accent-gold);
+}
+
+.contact-value.available {
+  color: var(--color-accent-gold);
+}
+
+/* Contact Social */
+.contact-social h3 {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-link {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--color-accent-gold);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-form-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form {
+  background-color: var(--color-bg-primary);
+  padding: 48px;
+  border: 1px solid var(--color-border);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-gold);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-bg-primary);
+  background-color: var(--color-accent-gold);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-accent-gold-hover);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    padding: 140px 0 60px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 32px;
+  }
+}

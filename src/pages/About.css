@@ -1,0 +1,302 @@
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
+
+/* Header */
+.about-header {
+  padding: 180px 0 80px;
+  background-color: var(--color-bg-primary);
+  text-align: center;
+}
+
+.about-header h1 {
+  margin-bottom: 16px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.about-header p {
+  font-size: 18px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Bio Section */
+.about-bio {
+  padding: 80px 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.bio-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Bio Image */
+.bio-image {
+  position: sticky;
+  top: 120px;
+}
+
+.bio-image img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+
+.bio-placeholder {
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-border) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-placeholder span {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-secondary);
+}
+
+/* Bio Text */
+.bio-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.bio-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bio-text h2 {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.bio-lead {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+  margin-bottom: 24px;
+}
+
+.bio-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.bio-text p:last-of-type {
+  margin-bottom: 40px;
+}
+
+.bio-signature {
+  margin-top: 40px;
+}
+
+.signature {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-style: italic;
+  color: var(--color-accent-gold);
+}
+
+/* Philosophy Section */
+.about-philosophy {
+  padding: 80px 0;
+  background-color: var(--color-bg-primary);
+}
+
+.philosophy-content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.philosophy-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.philosophy-content h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.philosophy-item {
+  padding: 40px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  transition: border-color 0.3s ease;
+}
+
+.philosophy-item:hover {
+  border-color: var(--color-accent-gold);
+}
+
+.philosophy-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  color: var(--color-accent-gold);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.philosophy-item h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.philosophy-item p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Experience Section */
+.about-experience {
+  padding: 80px 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.experience-content {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-content h2 {
+  font-size: 36px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-year {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bio-content {
+    gap: 40px;
+  }
+
+  .philosophy-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    padding: 140px 0 60px;
+  }
+
+  .bio-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bio-image {
+    position: static;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .bio-text h2 {
+    font-size: 28px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .experience-timeline::before {
+    display: none;
+  }
+}

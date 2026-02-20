@@ -1,0 +1,17 @@
+# Images Folder
+
+Place your project images here!
+
+## How to add your images:
+
+1. Put your project images in this folder (public/images/)
+2. Name them consistently, for example:
+   - project-1.jpg
+   - project-2.jpg
+   - project-3.jpg
+   - etc.
+
+3. Update the code to use your image names
+
+## Supported formats:
+- JPG, PNG, WebP, SVG
